@@ -33,9 +33,6 @@ def gettoken(refresh_token):
     return access_token
 def main():
     localtime = time.asctime( time.localtime(time.time()) )
-    wait_sec = random.randint(10,4*60)
-    print("wait sec-- "+str(wait_sec))
-    time.sleep(wait_sec)
     fo = open(path, "r+")
     refresh_token = fo.read()
     fo.close()
@@ -49,50 +46,45 @@ def main():
         if req.get(r'https://graph.microsoft.com/v1.0/me/drive/root',headers=headers).status_code == 200:
             num1+=1
             print("1调用成功"+str(num1)+'次')
-            time.sleep(random.randint(1,20))
         if req.get(r'https://graph.microsoft.com/v1.0/me/drive',headers=headers).status_code == 200:
             num1+=1
             print("2调用成功"+str(num1)+'次')
-            time.sleep(random.randint(1,20))
         if req.get(r'https://graph.microsoft.com/v1.0/drive/root',headers=headers).status_code == 200:
             num1+=1
             print('3调用成功'+str(num1)+'次')
-            time.sleep(random.randint(1,20))
         if req.get(r'https://graph.microsoft.com/v1.0/users ',headers=headers).status_code == 200:
             num1+=1
             print('4调用成功'+str(num1)+'次')
-            time.sleep(random.randint(1,20))
         if req.get(r'https://graph.microsoft.com/v1.0/me/messages',headers=headers).status_code == 200:
             num1+=1
             print('5调用成功'+str(num1)+'次') 
-            time.sleep(random.randint(1,20))
         if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders/inbox/messageRules',headers=headers).status_code == 200:
             num1+=1
             print('6调用成功'+str(num1)+'次')
-            time.sleep(random.randint(1,20))
         if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders/Inbox/messages/delta',headers=headers).status_code == 200:
             num1+=1
             print('7调用成功'+str(num1)+'次')
-            time.sleep(random.randint(1,20))
         if req.get(r'https://graph.microsoft.com/v1.0/me/drive/root/children',headers=headers).status_code == 200:
             num1+=1
             print('8调用成功'+str(num1)+'次')
-            time.sleep(random.randint(1,20))
         if req.get(r'https://api.powerbi.com/v1.0/myorg/apps',headers=headers).status_code == 200:
             num1+=1
             print('8调用成功'+str(num1)+'次')
-            time.sleep(random.randint(1,20))
         if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders',headers=headers).status_code == 200:
             num1+=1
             print('9调用成功'+str(num1)+'次')
-            time.sleep(random.randint(1,20))
+            time.sleep(random.randint(1,5))
         if req.get(r'https://graph.microsoft.com/v1.0/me/outlook/masterCategories',headers=headers).status_code == 200:
             num1+=1
             print('10调用成功'+str(num1)+'次')
-            time.sleep(random.randint(1,20))
+            time.sleep(random.randint(1,5))
             print('此次运行结束时间为 :', localtime)
     except:
         print("pass")
         pass
-for _ in range(3):
+tt = random.randint(3,6)
+for _ in range(tt):
+    wait_sec = random.randint(10,1*60)
+    print("wait sec-- "+str(wait_sec))
+    time.sleep(wait_sec)
     main()
