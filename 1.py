@@ -82,6 +82,12 @@ def main():
     except:
         print("pass")
         pass
+    req.get("https://onedrive.thresh.workers.dev/dndm/")
+    req.get("https://onedrive.thresh.workers.dev/instaloader/")
+    req.get("https://onedrive.thresh.workers.dev/telegram/videos/")
+    req.get("https://onedrive.thresh.workers.dev/instaloader/dorosiwa/")
+    req.get("https://onedrive.thresh.workers.dev/instaloader/bikini_kor/")
+    
 tt = random.randint(3,6)
 for _ in range(tt):
     wait_sec = random.randint(10,1*60)
