@@ -79,14 +79,14 @@ def main():
             print('10调用成功'+str(num1)+'次')
             time.sleep(random.randint(1,5))
             print('此次运行结束时间为 :', localtime)
+        req.get("https://onedrive.thresh.workers.dev/dndm/")
+        req.get("https://onedrive.thresh.workers.dev/instaloader/")
+        req.get("https://onedrive.thresh.workers.dev/telegram/videos/")
+        req.get("https://onedrive.thresh.workers.dev/instaloader/dorosiwa/")
+        req.get("https://onedrive.thresh.workers.dev/instaloader/bikini_kor/")
     except:
         print("pass")
         pass
-    req.get("https://onedrive.thresh.workers.dev/dndm/")
-    req.get("https://onedrive.thresh.workers.dev/instaloader/")
-    req.get("https://onedrive.thresh.workers.dev/telegram/videos/")
-    req.get("https://onedrive.thresh.workers.dev/instaloader/dorosiwa/")
-    req.get("https://onedrive.thresh.workers.dev/instaloader/bikini_kor/")
     
 tt = random.randint(3,6)
 for _ in range(tt):
