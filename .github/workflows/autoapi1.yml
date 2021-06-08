@@ -1,5 +1,5 @@
 #自动调用api保活，加密版
-name: Auto Api Secret
+name: Auto Api Secret 1
 
 on: 
   release:
@@ -10,7 +10,7 @@ on:
   #  branches: 
   #    - master
   schedule:
-    - cron: '6/17 */2 * * *'
+    - cron: '2/8 */2 * * *'
   watch:
     types: [started]
    
