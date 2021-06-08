@@ -46,7 +46,10 @@ jobs:
       run: | 
         rm -f 2.py
         rm -f configid.txt
-        rm -f configkey.txt    
+        rm -f configkey.txt  
+    - name: git pull #git pull
+      run: | 
+        git pull
     - name: Commit #上传新的refresh_token到仓库
       run: |
         git config --global user.email AutoupdateRobot@email.com
