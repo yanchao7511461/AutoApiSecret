@@ -2,7 +2,7 @@ import requests as req
 import time
 
 def r():
-    print(req.get('http://members.3322.org/dyndns/getip').text)
+    #print(req.get('http://members.3322.org/dyndns/getip').text)
     req.get("https://onedrive.thresh.workers.dev/dndm/")
     print("req1")
     req.get("https://onedrive.thresh.workers.dev/instaloader/")
